@@ -1,38 +1,31 @@
+/* Cosmetics */
 * {
     box-sizing: border-box;
     font-family:'Courier New', Courier, monospace;
     color: white;
 }
 
-html, body {
-    height: 100%;
+body {
+    background-image: linear-gradient(to right, #000020, #200020);
 }
 
 h1 {
     font-size: 2em;
-    min-width: 235px;
-    margin: 0px;
-    text-align: center;
 }
 
-body {
-    background-image: linear-gradient(to right, #000020, #200020);
-    display: flex;
-    justify-content: center;
+h1, .form {
+    margin: 10px 20px;
 }
 
 input, button {
     font-size: 18px;
     background-color: #00000000;
-    flex: auto;
     transition: all .2s ease-in;
 }
 
-input:hover,
-input:focus,
-button:hover
-{
-    border-color: white;
+input {
+    border: none;
+    border-bottom: 2px solid #4444AA;
 }
 
 button {
@@ -43,34 +36,34 @@ button {
     padding: 10px;
 }
 
-:focus {
+/* Animations + focus */
+
+input:hover,
+input:focus,
+button:hover
+{
     outline: 0;
+    border-color: white;
 }
 
-input {
-    border: none;
-    border-bottom: 2px solid #4444AA;
+/* Flexbox / layout */
+html, body {
+    height: 100%;
 }
 
-input:focus {
-    border: none;
-    border-bottom: 2px solid white;
-}
-
-.content-container {
-    width: 640px;
-    margin: 20px;
-
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
 .form {
     display: flex;
-    text-align: center;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+input, button {
+    flex: auto;
 }
