@@ -69,3 +69,7 @@ body {
 input, button {
     flex: auto;
 }
+
+footer {
+    margin-top: 50px;
+}
